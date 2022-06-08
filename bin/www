@@ -4,6 +4,7 @@
  * Module dependencies.
  */
 require('dotenv').config();
+const cors = require('cors');
 
 var app = require('../app');
 var debug = require('debug')('backend-api:server');
