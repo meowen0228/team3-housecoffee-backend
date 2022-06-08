@@ -29,9 +29,9 @@ module.exports = class GetPayment {
       const options = require('ecpay_aio_nodejs/conf/config-example'),
       create = new ecpay_payment(options);
       let htm = create.payment_client.aio_check_out_credit_onetime(parameters = base_param);
-      console.log(htm)
-      res.send(htm);
-      
+      res.render('payment_action', {
+        result: htm
+      })
     } catch (err) {
       // console.log(err);
       let error = {
