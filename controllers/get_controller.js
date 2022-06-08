@@ -23,12 +23,27 @@ module.exports = class GetPayment {
     };
     let invoice = {};
     let parameters = {};
-    const ecpay_payment = require('ecpay_aio_nodejs/lib/ecpay_payment')
-    const options = require('ecpay_aio_nodejs/conf/config-example'),
-    create = new ecpay_payment(options);
-    let htm = create.payment_client.aio_check_out_credit_onetime(parameters = base_param);
-    console.log(htm)
-    res.send(htm);
+
+    try {
+      const ecpay_payment = require('ecpay_aio_nodejs/lib/ecpay_payment')
+      const options = require('ecpay_aio_nodejs/conf/config-example'),
+      create = new ecpay_payment(options);
+      let htm = create.payment_client.aio_check_out_credit_onetime(parameters = base_param);
+      console.log(htm)
+      res.send(htm);
+      
+    } catch (err) {
+      // console.log(err);
+      let error = {
+          status: '500',
+          stack: ""
+      }
+      res.render('error', {
+          message: err,
+          error: error
+      })
+    }
+    
   }
 }
 
