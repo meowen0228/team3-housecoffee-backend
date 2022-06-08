@@ -23,8 +23,8 @@ module.exports = class GetPayment {
     };
     let invoice = {};
     let parameters = {};
-    const ecpay_payment = require('../node_modules/ECPAY_Payment_node_js/lib/ecpay_payment')
-    const options = require('../node_modules/ECPAY_Payment_node_js/conf/config-example'),
+    const ecpay_payment = require('../ECPAY_Payment_node_js/lib/ecpay_payment')
+    const options = require('../ECPAY_Payment_node_js/conf/config-example'),
     create = new ecpay_payment(options);
     let htm = create.payment_client.aio_check_out_credit_onetime(parameters = base_param);
     console.log(htm)
