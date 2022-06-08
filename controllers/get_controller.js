@@ -6,9 +6,9 @@ module.exports = class GetPayment {
   }
 
   payAction(req,res,next){
-    let uid = req.query.uid;
+    // let uid = req.query.uid;
     let base_param = {
-      MerchantTradeNo: uid, //請帶20碼uid, ex: f0a0d7e9fae1bb72bc93
+      MerchantTradeNo: 'f0a0d7e9fae1bb72bc93', //請帶20碼uid, ex: f0a0d7e9fae1bb72bc93
       MerchantTradeDate: onTimeValue(), //ex: 2017/02/13 15:45:30
       TotalAmount: '100',
       TradeDesc: '測試交易描述',
