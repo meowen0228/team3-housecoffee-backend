@@ -64,11 +64,11 @@ module.exports = class ModifyPayment {
         }
     }
     console.log("result: " + JSON.stringify(result));
-    // res.render(
-    //     'payment_result', {
-    //         result: result
-    //     }
-    // )
-    res.send(result)
+    res.render(
+        'payment_result', {
+            result: result
+        }
+    )
+    // res.send(result)
   }
 }
