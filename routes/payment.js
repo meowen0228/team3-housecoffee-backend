@@ -21,10 +21,10 @@ router.get('/', function(req, res, next) {
 router.get('/paymentaction', getPayment.payAction);
 
 // 銜接歐付寶的Return_URL回來的資料
-// router.post('/payment', modifyPayment.paymentResult);
+router.post('/', modifyPayment.paymentResult);
 
 // 銜接歐付寶的OrderResultURL
-// router.post('/paymentactionresult', modifyPayment.paymentActionResult);
+router.post('/paymentactionresult', modifyPayment.paymentActionResult);
 
 
 module.exports = router;
