@@ -3,7 +3,7 @@ const router = express.Router();
 const multer = require('multer');
 const db = require('../modules/mysql_config');
 const upload = multer();
-require("dotenv").config();
+// require("dotenv").config();
 
 const GetPayment = require('../controllers/get_controller')
 const ModifyPayment = require('../controllers/modify_controller')
