@@ -3,7 +3,7 @@ module.exports = class GetPayment {
   payAction(req,res,next){
     const id = req.query.id;
     const totalPrice = req.query.totalPrice;
-    const uid = randomValue(10, 99) + "1234567890234567" + randomValue(10, 99);
+    let uid = randomValue(10, 99) + "1234567890234567" + randomValue(10, 99);
 
     let base_param = {
       MerchantTradeNo: uid, //請帶20碼uid, ex: f0a0d7e9fae1bb72bc93
