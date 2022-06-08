@@ -15,7 +15,7 @@ modifyPayment = new ModifyPayment();
 router.get('/', getPayment.payUid);
 
 // 用戶在付款頁面按下結帳的API
-router.get('/paymentaction', getPayment.payAction);
+router.post('/paymentaction', getPayment.payAction);
 
 // 銜接歐付寶的Return_URL回來的資料
 router.post('/', modifyPayment.paymentResult);

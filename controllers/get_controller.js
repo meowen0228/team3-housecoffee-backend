@@ -6,11 +6,13 @@ module.exports = class GetPayment {
   }
 
   payAction(req,res,next){
-    // let uid = req.query.uid;
+    const id = body.data.id;
+    const totalPrice = body.data.totalPrice;
+
     let base_param = {
-      MerchantTradeNo: 'f0a0d7e9fae1bb72bc93', //請帶20碼uid, ex: f0a0d7e9fae1bb72bc93
+      MerchantTradeNo: id, //請帶20碼uid, ex: f0a0d7e9fae1bb72bc93
       MerchantTradeDate: onTimeValue(), //ex: 2017/02/13 15:45:30
-      TotalAmount: '100',
+      TotalAmount: totalPrice,
       TradeDesc: '測試交易描述',
       ItemName: 'HouseCoffe網路購物',
       ReturnURL: 'https://team3-housecoffee-backend.herokuapp.com/payment',
