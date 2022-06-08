@@ -3,7 +3,7 @@ module.exports = class GetPayment {
   payAction(req,res,next){
     
     const memberId = req.query.id;
-    const uuid = randomValue(10, 99) + "1234567890234567" + randomValue(10, 99);
+    const uuid = memberId + string(randomValue(10, 99) + "1234567890234567" + randomValue(10, 99)).subString(0, memberId.length);
     const totalPrice = req.query.totalPrice;
     
     let base_param = {
