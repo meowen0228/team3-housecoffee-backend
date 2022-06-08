@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 require('dotenv').config();
-require('ECPAY_Payment_node_js')
+// require('ECPAY_Payment_node_js')
 const cors = require('cors');
 
 var indexRouter = require('./routes/index');
