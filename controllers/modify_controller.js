@@ -69,6 +69,6 @@ module.exports = class ModifyPayment {
     //         result: result
     //     }
     // )
-    res.send('付款完成')
+    res.send(result)
   }
 }
