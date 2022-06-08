@@ -9,7 +9,7 @@ module.exports = class GetPayment {
       ItemName: 'HouseCoffe網路購物',
       ReturnURL: 'https://team3-housecoffee-backend.herokuapp.com/payment',
       // ChooseSubPayment: '',
-      OrderResultURL: 'https://team3-housecoffee-backend.herokuapp.com/payment/payment_result',
+      OrderResultURL: 'https://team3-housecoffee-backend.herokuapp.com/payment/paymentactionresult',
       // NeedExtraPaidInfo: '1',
       // ClientBackURL: 'https://www.google.com',
       // ItemURL: 'http://item.test.tw',
