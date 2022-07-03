@@ -9,7 +9,7 @@ module.exports = class GetPayment {
     let base_param = {
       MerchantTradeNo: uid, //請帶20碼uid, ex: f0a0d7e9fae1bb72bc93
       MerchantTradeDate: onTimeValue(), //ex: 2017/02/13 15:45:30
-      TotalAmount: 1000,
+      TotalAmount: totalPrice,
       TradeDesc: '測試交易描述',
       ItemName: 'HouseCoffe網路購物',
       ReturnURL: 'https://team3-housecoffee-backend.herokuapp.com/payment',
