@@ -12,7 +12,7 @@ getPayment = new GetPayment();
 modifyPayment = new ModifyPayment();
 
 // 用戶進入付款頁面所呼叫的API
-router.get('/', getPayment.payUid);
+router.get('/');
 
 // 用戶在付款頁面按下結帳的API
 router.get('/paymentaction', getPayment.payAction);

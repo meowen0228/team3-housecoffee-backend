@@ -1,10 +1,5 @@
 module.exports = class GetPayment {
 
-  payUid(req, res) {
-    let uid = randomValue(10, 99) + "1234567890234567" + randomValue(10, 99);
-    res.render('payment', { uid: uid  });
-  }
-
   payAction(req,res,next){
     let uid = randomValue(10, 99) + "1234567890234567" + randomValue(10, 99);
     let base_param = {
